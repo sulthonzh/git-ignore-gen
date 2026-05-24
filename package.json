@@ -1,5 +1,5 @@
 {
-  "name": "git-ignore-gen",
+  "name": "@sulthonzh/git-ignore-gen",
   "version": "1.0.0",
   "description": "Interactive CLI that scans your project for untracked files and suggests .gitignore patterns based on actual project state",
   "main": "dist/index.js",
