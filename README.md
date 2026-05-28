@@ -10,6 +10,7 @@ Interactive CLI that scans your project for untracked files and suggests .gitign
 - **High confidence matching**: Uses pattern recognition with confidence scoring
 - **Category grouping**: Organizes patterns by type (dependencies, build, logs, system, etc.)
 - **Safe operations**: Supports dry-run mode and update mode to preserve existing .gitignore
+- **Enhanced pattern support**: Now includes patterns for Python, Java, IDE files, and more frameworks
 
 ## Installation
 
@@ -104,13 +105,17 @@ git-ignore-gen --path /path/to/repo
 
 The tool recognizes common patterns for:
 
-- **Dependencies**: `node_modules/`, `vendor/`
-- **Build artifacts**: `dist/`, `build/`, `.next/`, `.nuxt/`, `target/`
-- **Logs**: `*.log`
-- **System files**: `.DS_Store`, `Thumbs.db`
+- **Dependencies**: `node_modules/`, `vendor/`, `venv/`, `.venv/`
+- **Build artifacts**: `dist/`, `build/`, `.next/`, `.nuxt/`, `target/`, `__pycache__/`, `*.pyc`
+- **Logs**: `*.log`, `npm-debug.log*`, `yarn-debug.log*`, `yarn-error.log*`
+- **System files**: `.DS_Store`, `Thumbs.db`, `.idea/`, `.vscode/`
 - **Config**: `.env.local`
 - **Test coverage**: `coverage/`
 - **Cache**: `.cache/`
+- **IDE files**: IntelliJ IDEA, VS Code, Sublime Text project files
+- **Python**: Virtual environments, bytecode cache, compiled files
+- **Java**: Gradle build system files
+- **Web frameworks**: Next.js, Nuxt.js, Jekyll, SASS
 
 ## Options
 

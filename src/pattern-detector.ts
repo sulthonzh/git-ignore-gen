@@ -145,6 +145,76 @@ export class PatternDetector {
           examples: ['target/', 'target/debug/'],
         },
       ],
+      [
+        'venv/',
+        {
+          pattern: 'venv/',
+          confidence: 0.9,
+          description: 'Python virtual environment',
+          category: 'dependencies',
+          examples: ['venv/', 'venv/lib/'],
+        },
+      ],
+      [
+        '.venv/',
+        {
+          pattern: '.venv/',
+          confidence: 0.9,
+          description: 'Python virtual environment (dot prefix)',
+          category: 'dependencies',
+          examples: ['.venv/', '.venv/lib/'],
+        },
+      ],
+      [
+        '__pycache__/',
+        {
+          pattern: '__pycache__/',
+          confidence: 0.88,
+          description: 'Python bytecode cache',
+          category: 'build',
+          examples: ['__pycache__/', '__pycache__/module.pyc'],
+        },
+      ],
+      [
+        '*.pyc',
+        {
+          pattern: '*.pyc',
+          confidence: 0.85,
+          description: 'Python compiled files',
+          category: 'build',
+          examples: ['main.pyc', 'utils.pyc'],
+        },
+      ],
+      [
+        'vendor/',
+        {
+          pattern: 'vendor/',
+          confidence: 0.85,
+          description: 'Vendor dependencies',
+          category: 'dependencies',
+          examples: ['vendor/', 'vendor/laravel/'],
+        },
+      ],
+      [
+        '.idea/',
+        {
+          pattern: '.idea/',
+          confidence: 0.9,
+          description: 'IntelliJ IDEA project files',
+          category: 'system',
+          examples: ['.idea/', '.idea/workspace.xml'],
+        },
+      ],
+      [
+        '.vscode/',
+        {
+          pattern: '.vscode/',
+          confidence: 0.9,
+          description: 'VS Code workspace files',
+          category: 'system',
+          examples: ['.vscode/', '.vscode/settings.json'],
+        },
+      ],
     ]);
   }
 
