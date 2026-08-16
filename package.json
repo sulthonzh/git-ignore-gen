@@ -29,7 +29,7 @@
     "url": "https://github.com/sulthonzh/git-ignore-gen"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.31.0",
+    "@changesets/cli": "^3.0.0",
     "@types/inquirer": "^9.0.7",
     "@types/jest": "^29.5.12",
     "@types/node": "^20.11.30",
